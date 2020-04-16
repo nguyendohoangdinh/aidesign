@@ -696,10 +696,14 @@ img {
               padding: 8px 10px; } }
         .footer-copyright-notice .copyright-notice-wapper ul li:last-child a {
           border-right: 1px solid #F7FBFC; }
-
+@media screen and (max-width:767px) {
+  .hero-banner {
+    height: 400px;
+  }
+}
 .hero-banner {
   position: relative;
-  height: 400px;
+  height: 550px;
   min-height: calc(100vh - 87px);
   padding-top: 100px;
   padding-bottom: 60px;
@@ -744,8 +748,8 @@ img {
       @media (max-width: 767px) {
         .hero-banner .hero-banner-info .h1, .hero-banner .hero-banner-info p {
           margin-bottom: 10px; } }
-    .hero-banner .hero-banner-info .hero-banner-des {
-      margin-bottom: 60px; }
+    /* .hero-banner .hero-banner-info .hero-banner-des {
+      margin-bottom: 60px; } */
       @media (max-width: 767px) {
         .hero-banner .hero-banner-info .hero-banner-des {
           margin-bottom: 30px; } }
