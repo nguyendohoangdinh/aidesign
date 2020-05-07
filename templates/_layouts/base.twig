@@ -57,7 +57,7 @@
 		<meta charset="utf-8">
 		<title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>  
 		{% set homepage = craft.entries().section('homepage').one() %}
-		<iframe scrolling="no" src={{ homepage.audio }}?start=true frameborder="0" allowfullscreen="true"  style="display:none;"></iframe>
+		<iframe width="560" height="315" src="{{ homepage.audio }}?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="display:none;" ></iframe>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<link rel="shortcut icon" type="image/png" href="/images/favicon.png"/> 
