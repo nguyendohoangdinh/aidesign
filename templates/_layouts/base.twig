@@ -59,6 +59,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<link rel="shortcut icon" type="image/png" href="/images/favicon.png"/> 
+		{% set homepage = craft.entries().section('homepage').one() %}
+		{# {% dd(homepage.audio.one) %} #}
+		<iframe scrolling="no" src={{ homepage.audio }}?start=true frameborder="0" allowfullscreen="true"  style="display:none;"></iframe>
 		<link rel="stylesheet" href="https://use.typekit.net/ucx5cgp.css">
 		<link rel="stylesheet" type="text/css" href="{{ siteUrl }}assets/bootstrap/css/bootstrap.min.css"> 
 		<link rel="stylesheet" type="text/css" href="{{ siteUrl }}assets/css/style.css">
@@ -68,7 +71,7 @@
 <body {% if bodyClass is defined %}class="{{ bodyClass }}"{% endif %}>
 	{% block body %}{% endblock %}
 	{% block foot %}{% endblock %}
-
+	
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.js"
   	integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI="
   	crossorigin="anonymous"></script> 

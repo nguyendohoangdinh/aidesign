@@ -36,6 +36,7 @@
 
 
 {% block body %}
+	
 	<header id="header" class="site-header">
 		<div id="top-bar" class="top-bar">
 			<div class="container">
@@ -136,7 +137,4 @@
 			</div> 
 		</div>
 	</footer>
-	{% set homepage = craft.entries().section('homepage').one() %}
-	{# {% dd(homepage.audio.one) %} #}
-	<iframe scrolling="no" src={{ homepage.audio }}?start=true frameborder="0" allowfullscreen="true"  style="display:none;"/>
 {% endblock %}
