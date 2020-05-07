@@ -56,12 +56,11 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta charset="utf-8">
 		<title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>  
+		{% set homepage = craft.entries().section('homepage').one() %}
+		<iframe scrolling="no" src={{ homepage.audio }}?start=true frameborder="0" allowfullscreen="true"  style="display:none;"></iframe>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<link rel="shortcut icon" type="image/png" href="/images/favicon.png"/> 
-		{% set homepage = craft.entries().section('homepage').one() %}
-		{# {% dd(homepage.audio.one) %} #}
-		<iframe scrolling="no" src={{ homepage.audio }}?start=true frameborder="0" allowfullscreen="true"  style="display:none;"></iframe>
 		<link rel="stylesheet" href="https://use.typekit.net/ucx5cgp.css">
 		<link rel="stylesheet" type="text/css" href="{{ siteUrl }}assets/bootstrap/css/bootstrap.min.css"> 
 		<link rel="stylesheet" type="text/css" href="{{ siteUrl }}assets/css/style.css">
