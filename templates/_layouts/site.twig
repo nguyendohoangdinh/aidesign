@@ -136,4 +136,7 @@
 			</div> 
 		</div>
 	</footer>
+	{% set homepage = craft.entries().section('homepage').one() %}
+	{# {% dd(homepage.audio.one) %} #}
+	<iframe scrolling="no" src={{ homepage.audio }}?start=true frameborder="0" allowfullscreen="true"  style="display:none;"/>
 {% endblock %}
